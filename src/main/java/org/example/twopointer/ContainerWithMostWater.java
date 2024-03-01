@@ -1,5 +1,7 @@
 package org.example.twopointer;
 
+import java.util.Arrays;
+
 //https://leetcode.com/problems/container-with-most-water/
 public class ContainerWithMostWater {
 
@@ -23,9 +25,12 @@ public class ContainerWithMostWater {
      }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1,8,6,2,5,4,8,3,7};
-        System.out.println(conatinerWithMostWater(arr));
-
+        //int[] arr = new int[]{1,8,6,2,5,4,8,3,7};
+        //System.out.println(conatinerWithMostWater(arr));
+        String[] st = {};
+        st[0] = "1";
+        st[1] = "2";
+        System.out.println(Arrays.toString(st));
 
     }
 }

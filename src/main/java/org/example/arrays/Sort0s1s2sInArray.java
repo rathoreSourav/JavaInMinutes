@@ -16,12 +16,16 @@ public class Sort0s1s2sInArray {
                 result[left]=arr[i];
                 left ++;
             }
-            if(arr[i]==1)
+            if(arr[i]==1){
                 onesCount++;
+            }
             if (arr[i] == 2){
                 result[right]=arr[i];
                 right--;
             }
+        }
+        for(int i = left; i < left + onesCount; i++){
+            result[i] = 1;
         }
 
         return result;

@@ -10,9 +10,11 @@ import java.util.stream.Collectors;
 public class FirstNonRepeatingChar {
 
     public static void findFirstNonRepeatingCharacter(String input) {
-        Optional<Character> first = input.chars()
-                .mapToObj(ch -> (char) ch)
-                .collect(Collectors.groupingBy(Character::toLowerCase, Collectors.counting()))
+        String str = "test";
+        String strNew = str.substring(0,1).toUpperCase() + str.substring(1);
+        System.out.println(strNew);
+        Optional<String> first = Arrays.stream(input.split(""))
+                .collect(Collectors.groupingBy(String::toLowerCase, Collectors.counting()))
                 .entrySet().stream()
                 .filter(entry -> entry.getValue() == 1)
                 .map(Map.Entry::getKey)
